@@ -13,6 +13,10 @@ const SeoMetaTags = ({ title, description, name }) => {
       <meta property='og:title' content={title} />
       <meta property='og:description' content={description} />
       {/* OG image tags */}
+      <meta
+        property='og:image'
+        content='https://mike-vega.dev/portfolio-screenshot.png'
+      />
       <meta property='og:image:alt' content={`Image of ${title} site`} />
       {/* Twitter tags */}
       <meta name='twitter:creator' content={name} />
