@@ -12,6 +12,7 @@ import SeoMetaTags from '../Components/SeoMetaTags/SeoMetaTags';
 import Footer from '../Components/Footer/Footer';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { initGA, trackPageView } from '../analytics';
 
 const LandingPage = () => {
   const { projects, certificates, loading, isModalOpen, setIsModalOpen, selectedImg } =
