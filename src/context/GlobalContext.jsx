@@ -6,7 +6,7 @@ export const GlobalContext = createContext();
 const projectsUrl =
   'https://fullstack-portfolio-backend-production.up.railway.app/projects';
 const certificatesUrl =
-  'http://fullstack-portfolio-backend-production.up.railway.app/certificates';
+  'https://fullstack-portfolio-backend-production.up.railway.app/certificates';
 
 const GlobalContextProvider = ({ children }) => {
   const [projects, setProjects] = useState([]);
