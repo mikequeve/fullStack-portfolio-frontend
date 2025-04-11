@@ -17,7 +17,7 @@ const LandingPage = () => {
     useContext(GlobalContext);
 
   useEffect(() => {
-    ReactGA.initialize('G-N9V5M5HW4C');
+    ReactGA.initialize('G-XM9QJXR0QB');
     ReactGA.send({
       hitType: 'pageview',
       page: window.location.pathname,
