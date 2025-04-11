@@ -4,8 +4,18 @@ import ProjectDetails from './Pages/ProjectDetails/ProjectDetails';
 import LandingPage from './Pages/LandingPage';
 import GlobalContextProvider from './context/GlobalContext';
 import { HelmetProvider } from 'react-helmet-async';
+import ReactGA from 'react-ga4';
 
 function App() {
+  useEffect(() => {
+    ReactGA.initialize('G-XM9QJXR0QB');
+    ReactGA.send({
+      hitType: 'pageview',
+      page: window.location.pathname,
+      title: 'App.jsx',
+    });
+  }, []);
+
   return (
     <>
       <HelmetProvider>
