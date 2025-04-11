@@ -1,0 +1,9 @@
+.site__portfolio {
+  min-height: 50vh;
+}
+
+.portfolio__content {
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}

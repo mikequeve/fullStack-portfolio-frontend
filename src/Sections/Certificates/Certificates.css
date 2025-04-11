@@ -1,0 +1,9 @@
+.site__certificates {
+  min-height: 50vh;
+}
+
+.certificates__container {
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  width: 100%;
+}
