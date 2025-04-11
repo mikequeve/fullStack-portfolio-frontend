@@ -11,11 +11,6 @@ import CertificateModal from '../Components/CertificateModal/CertificateModal';
 import SeoMetaTags from '../Components/SeoMetaTags/SeoMetaTags';
 import Footer from '../Components/Footer/Footer';
 
-import ReactGA from 'react-ga';
-
-ReactGA.initialize('G-XM9QJXR0QB', { siteSpeedSampleRate: 100 });
-ReactGA.pageview(window.location.pathname + window.location.search);
-
 const LandingPage = () => {
   const { projects, certificates, loading, isModalOpen, setIsModalOpen, selectedImg } =
     useContext(GlobalContext);
