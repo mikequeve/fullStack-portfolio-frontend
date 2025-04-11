@@ -4,6 +4,7 @@ import ProjectDetails from './Pages/ProjectDetails/ProjectDetails';
 import LandingPage from './Pages/LandingPage';
 import GlobalContextProvider from './context/GlobalContext';
 import { HelmetProvider } from 'react-helmet-async';
+import { useEffect } from 'react';
 
 function App() {
   const location = useLocation();
