@@ -13,7 +13,7 @@ import Footer from '../Components/Footer/Footer';
 
 import ReactGA from 'react-ga';
 
-ReactGA.initialize('G-XM9QJXR0QB');
+ReactGA.initialize('G-XM9QJXR0QB', { siteSpeedSampleRate: 100 });
 ReactGA.pageview(window.location.pathname + window.location.search);
 
 const LandingPage = () => {
