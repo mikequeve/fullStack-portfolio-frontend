@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import Navbar from '../Components/Navbar/Navbar';
 import Hero from '../Sections/Hero/Hero';
 import About from '../Sections/About/About';
@@ -10,10 +10,20 @@ import { GlobalContext } from '../context/GlobalContext';
 import CertificateModal from '../Components/CertificateModal/CertificateModal';
 import SeoMetaTags from '../Components/SeoMetaTags/SeoMetaTags';
 import Footer from '../Components/Footer/Footer';
+import ReactGA from 'react-ga4';
 
 const LandingPage = () => {
   const { projects, certificates, loading, isModalOpen, setIsModalOpen, selectedImg } =
     useContext(GlobalContext);
+
+  useEffect(() => {
+    ReactGA.initialize('G-N9V5M5HW4C');
+    ReactGA.send({
+      hitType: 'pageview',
+      page: window.location.pathname,
+      title: 'App.jsx',
+    });
+  }, []);
 
   return (
     <>
