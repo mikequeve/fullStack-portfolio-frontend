@@ -10,10 +10,22 @@ import { GlobalContext } from '../context/GlobalContext';
 import CertificateModal from '../Components/CertificateModal/CertificateModal';
 import SeoMetaTags from '../Components/SeoMetaTags/SeoMetaTags';
 import Footer from '../Components/Footer/Footer';
+import { useEffect } from 'react';
+import { initGA, trackPageView } from './analytics';
 
 const LandingPage = () => {
   const { projects, certificates, loading, isModalOpen, setIsModalOpen, selectedImg } =
     useContext(GlobalContext);
+
+  const location = useLocation();
+
+  useEffect(() => {
+    initGA();
+  }, []);
+
+  useEffect(() => {
+    trackPageView(location.pathname + location.search);
+  }, [location]);
 
   return (
     <>

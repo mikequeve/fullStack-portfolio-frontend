@@ -4,20 +4,8 @@ import ProjectDetails from './Pages/ProjectDetails/ProjectDetails';
 import LandingPage from './Pages/LandingPage';
 import GlobalContextProvider from './context/GlobalContext';
 import { HelmetProvider } from 'react-helmet-async';
-import { useEffect } from 'react';
-import { initGA, trackPageView } from './analytics';
 
 function App() {
-  const location = useLocation();
-
-  useEffect(() => {
-    initGA();
-  }, []);
-
-  useEffect(() => {
-    trackPageView(location.pathname + location.search);
-  }, [location]);
-
   return (
     <>
       <HelmetProvider>
