@@ -3,8 +3,10 @@ import { createContext, useEffect, useState } from 'react';
 
 export const GlobalContext = createContext();
 
-const projectsUrl = 'http://localhost:8080/projects';
-const certificatesUrl = 'http://localhost:8080/certificates';
+const projectsUrl =
+  'https://fullstack-portfolio-backend-production.up.railway.app/projects';
+const certificatesUrl =
+  'http://fullstack-portfolio-backend-production.up.railway.app/certificates';
 
 const GlobalContextProvider = ({ children }) => {
   const [projects, setProjects] = useState([]);
