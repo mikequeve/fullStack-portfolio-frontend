@@ -6,6 +6,16 @@ import GlobalContextProvider from './context/GlobalContext';
 import { HelmetProvider } from 'react-helmet-async';
 
 function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    initGA();
+  }, []);
+
+  useEffect(() => {
+    trackPageView(location.pathname + location.search);
+  }, [location]);
+
   return (
     <>
       <HelmetProvider>

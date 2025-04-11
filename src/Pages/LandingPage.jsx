@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import Navbar from '../Components/Navbar/Navbar';
 import Hero from '../Sections/Hero/Hero';
 import About from '../Sections/About/About';
@@ -11,22 +11,10 @@ import CertificateModal from '../Components/CertificateModal/CertificateModal';
 import SeoMetaTags from '../Components/SeoMetaTags/SeoMetaTags';
 import Footer from '../Components/Footer/Footer';
 import { useEffect } from 'react';
-import { initGA, trackPageView } from './analytics';
-import { useLocation } from 'react-router-dom';
 
 const LandingPage = () => {
   const { projects, certificates, loading, isModalOpen, setIsModalOpen, selectedImg } =
     useContext(GlobalContext);
-
-  const location = useLocation();
-
-  useEffect(() => {
-    initGA();
-  }, []);
-
-  useEffect(() => {
-    trackPageView(location.pathname + location.search);
-  }, [location]);
 
   return (
     <>
