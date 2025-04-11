@@ -21,7 +21,7 @@ const LandingPage = () => {
     ReactGA.send({
       hitType: 'pageview',
       page: window.location.pathname,
-      title: 'App.jsx',
+      title: 'LandingPage.jsx',
     });
   }, []);
 
