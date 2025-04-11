@@ -10,20 +10,15 @@ import { GlobalContext } from '../context/GlobalContext';
 import CertificateModal from '../Components/CertificateModal/CertificateModal';
 import SeoMetaTags from '../Components/SeoMetaTags/SeoMetaTags';
 import Footer from '../Components/Footer/Footer';
-import ReactGA from 'react-ga4';
+
+import ReactGA from 'react-ga';
+
+ReactGA.initialize('G-XM9QJXR0QB');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 const LandingPage = () => {
   const { projects, certificates, loading, isModalOpen, setIsModalOpen, selectedImg } =
     useContext(GlobalContext);
-
-  useEffect(() => {
-    ReactGA.initialize('G-XM9QJXR0QB');
-    ReactGA.send({
-      hitType: 'pageview',
-      page: window.location.pathname,
-      title: 'LandingPage.jsx',
-    });
-  }, []);
 
   return (
     <>
