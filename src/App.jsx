@@ -10,11 +10,6 @@ import { useEffect } from 'react';
 function App() {
   useEffect(() => {
     ReactGA.initialize('G-XM9QJXR0QB');
-    ReactGA.send({
-      hitType: 'pageview',
-      page: window.location.pathname,
-      title: 'App.jsx',
-    });
   }, []);
 
   return (
