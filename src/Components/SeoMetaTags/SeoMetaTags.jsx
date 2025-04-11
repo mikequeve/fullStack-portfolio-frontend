@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const SeoMetaTags = ({ title, description, image, name }) => {
+const SeoMetaTags = ({ title, description, name }) => {
   return (
     <Helmet>
       <title>{title}</title>

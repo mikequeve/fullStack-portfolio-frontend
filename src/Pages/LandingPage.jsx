@@ -20,7 +20,6 @@ const LandingPage = () => {
       <SeoMetaTags
         title={'Mike.Vega Portfolio'}
         description={'Professional Portfolio - Michael Quesada Vega'}
-        image={'./portfolio-screenshot.png'}
         name={'Mike.Vega Portfolio'}
       />
       <Navbar />
