@@ -5,6 +5,7 @@ import LandingPage from './Pages/LandingPage';
 import GlobalContextProvider from './context/GlobalContext';
 import { HelmetProvider } from 'react-helmet-async';
 import ReactGA from 'react-ga4';
+import { useEffect } from 'react';
 
 function App() {
   useEffect(() => {
