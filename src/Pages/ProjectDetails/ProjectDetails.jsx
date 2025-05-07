@@ -78,13 +78,16 @@ const ProjectDetails = () => {
                       DEMO
                     </a>
                   </div>
-
-                  <div className='flex-center tech__btn button'>
-                    <Github />
-                    <a href={repoLink} target='_blank' rel='noopener noreferer'>
-                      GITHUB
-                    </a>
-                  </div>
+                  {repoLink ? (
+                    <div className='flex-center tech__btn button'>
+                      <Github />
+                      <a href={repoLink} target='_blank' rel='noopener noreferer'>
+                        GITHUB
+                      </a>
+                    </div>
+                  ) : (
+                    ''
+                  )}
                 </div>
               </div>
             </div>
